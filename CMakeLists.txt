@@ -19,6 +19,8 @@ file(GLOB_RECURSE HPPFILES "*.hpp")
 file(GLOB_RECURSE CPPFILES "*.cpp")
 file(GLOB_RECURSE UIFILES "*.ui")
 
+list(FILTER CPPFILES EXCLUDE REGEX "CMakeCXXCompilerId.cpp$")
+
 set(PROJECT_SOURCES
         ${UIFILES}
         ${HFILES}

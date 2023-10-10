@@ -8,6 +8,7 @@
 
 int main(int argc, char *argv[])
 {
+    // test ci
     QApplication a(argc, argv);
 
     QTranslator translator;

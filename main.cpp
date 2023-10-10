@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-    // test ci
+    // test ci pull request
     QApplication a(argc, argv);
 
     QTranslator translator;

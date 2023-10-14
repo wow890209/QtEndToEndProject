@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     // test ci pull request
 
-    qDebug() << "rePush test111";
+    qDebug() << "rePush test1112222";
 
     QApplication a(argc, argv);
 

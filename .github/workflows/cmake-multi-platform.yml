@@ -77,7 +77,7 @@ jobs:
       run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
       
     - name: Run
-      run: ./QtEndToEndProject.exe
+      run: D:\a\QtEndToEndProject\QtEndToEndProject\build\Release\QtEndToEndProject.exe
       
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}

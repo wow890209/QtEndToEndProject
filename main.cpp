@@ -9,6 +9,9 @@
 int main(int argc, char *argv[])
 {
     // test ci pull request
+
+    qDebug() << "rePush test";
+
     QApplication a(argc, argv);
 
     QTranslator translator;

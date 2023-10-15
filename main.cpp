@@ -8,7 +8,10 @@
 
 int main(int argc, char *argv[])
 {
-    // test ci
+    // test ci pull request
+
+    qDebug() << "rePush test1112222";
+
     QApplication a(argc, argv);
 
     QTranslator translator;

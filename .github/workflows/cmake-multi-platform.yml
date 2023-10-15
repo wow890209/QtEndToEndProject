@@ -78,8 +78,8 @@ jobs:
           | echo $CMAKE_PROJECT_NAME
 
     - name: Show
-      run: ls ${{ steps.strings.outputs.build-output-dir }} 
-          | echo CMAKE_PROJECT_NAME
+      run: ls ${{ steps.strings.outputs.build-output-dir }}
+          | echo $CMAKE_PROJECT_NAME
       
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}

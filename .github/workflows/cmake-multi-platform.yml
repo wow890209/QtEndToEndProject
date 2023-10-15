@@ -83,7 +83,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
           name: my-project
-          path: steps.strings.outputs.build-output-dir
+          path: ${{ steps.strings.outputs.build-output-dir }}
         
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}

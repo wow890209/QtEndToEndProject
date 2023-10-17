@@ -82,7 +82,7 @@ jobs:
     - name: Upload
       uses: actions/upload-artifact@v3
       with:
-          name: my-project- ${ runner.os }
+          name: my-project- ${{ runner.os }}
           path: ${{ steps.strings.outputs.build-output-dir }}
         
     # - name: Test

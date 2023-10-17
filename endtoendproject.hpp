@@ -19,6 +19,9 @@ public:
     EndToEndProject(QWidget *parent = nullptr);
     ~EndToEndProject();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::EndToEndProject *ui;
 };

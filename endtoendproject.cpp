@@ -16,3 +16,10 @@ EndToEndProject::~EndToEndProject()
 }
 
 
+
+void EndToEndProject::on_pushButton_clicked()
+{
+    ui->outputLabel->setText("Hello World!");
+    ui->outputLabel->setStyleSheet("font-size: 80pt");
+}
+

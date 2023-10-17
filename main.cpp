@@ -2,9 +2,9 @@
 #include "endtoendproject.hpp"
 
 #include <QApplication>
-
 #include <QLocale>
 #include <QTranslator>
+#include <string>
 
 int main(int argc, char *argv[])
 {

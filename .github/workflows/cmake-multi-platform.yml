@@ -80,6 +80,7 @@ jobs:
       run: ls ${{ steps.strings.outputs.build-output-dir }}
       
     - name: Upload
+      if: runner.os == 'Windows'
       uses: actions/upload-artifact@v3
       with:
           name: my-project- ${{ runner.os }}

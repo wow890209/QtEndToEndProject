@@ -82,15 +82,13 @@ jobs:
 
     - name: Package
       if: runner.os == 'Windows'
-      run: cd ${{ steps.strings.outputs.build-output-dir }}/Release
-        | windeployqt QtEndToEndProject.exe
+      run: windeployqt ${{ steps.strings.outputs.build-output-dir }}/Release/QtEndToEndProject.exe
       
     - name: Upload
-      if: runner.os == 'Windows'
       uses: actions/upload-artifact@v3
       with:
           name: my-project- ${{ runner.os }}
-          path: ${{ steps.strings.outputs.build-output-dir }}/Release
+          path: ${{ steps.strings.outputs.build-output-dir }}
 
         
     # - name: Test

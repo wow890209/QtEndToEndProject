@@ -78,13 +78,21 @@ jobs:
 
     - name: Show
       run: ls ${{ steps.strings.outputs.build-output-dir }}
+
+
+    - name: Package
+      if: runner.os == 'Windows'
+      run: cd ${{ steps.strings.outputs.build-output-dir }}/Release
+        | windepolyqt QtEndToEndProject.exe
       
     - name: Upload
       if: runner.os == 'Windows'
+
       uses: actions/upload-artifact@v3
       with:
           name: my-project- ${{ runner.os }}
-          path: ${{ steps.strings.outputs.build-output-dir }}
+          path: ${{ steps.strings.outputs.build-output-dir }}/Release
+
         
     # - name: Test
     #   working-directory: ${{ steps.strings.outputs.build-output-dir }}

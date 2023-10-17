@@ -83,7 +83,7 @@ jobs:
     - name: Package
       if: runner.os == 'Windows'
       run: cd ${{ steps.strings.outputs.build-output-dir }}/Release
-        | windepolyqt QtEndToEndProject.exe
+        | windeployqt QtEndToEndProject.exe
       
     - name: Upload
       if: runner.os == 'Windows'

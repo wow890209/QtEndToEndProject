@@ -46,6 +46,10 @@ jobs:
             c_compiler: clang
           - os: ubuntu-latest
             c_compiler: cl
+          - os: macos-latest   # 除非你有需要，否则 macOS 通常不使用 gcc
+            c_compiler: gcc
+          - os: macos-latest   # 除非你有需要，否则 macOS 通常不使用 cl
+            c_compiler: cl
 
     steps:
     - uses: actions/checkout@v3

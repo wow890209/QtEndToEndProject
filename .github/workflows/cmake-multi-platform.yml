@@ -83,7 +83,7 @@ jobs:
     #   run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }} 
 
     - name: Show
-      run:  aqt list-qt windows desktop --modules 6.4.3 win64_mingw81
+      run: aqt list-qt windows desktop --arch 6.4.3
 # ls ${{ steps.strings.outputs.build-output-dir }} |
     - name: Mac Package
       if: runner.os == 'macOS'

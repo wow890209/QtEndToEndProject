@@ -9,8 +9,16 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets LinguistTools)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets LinguistTools)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS
+    Widgets
+    LinguistTools
+    HttpServer
+)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS
+    Widgets
+    LinguistTools
+    HttpServer
+)
 
 set(TS_FILES QtEndToEndProject_zh_TW.ts)
 
@@ -22,6 +30,7 @@ file(GLOB_RECURSE UIFILES "*.ui")
 list(FILTER CPPFILES EXCLUDE REGEX "CMakeCXXCompilerId.cpp$")
 
 set(PROJECT_SOURCES
+        .gitignore
         ${UIFILES}
         ${HFILES}
         ${HPPFILES}
@@ -56,7 +65,10 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-target_link_libraries(QtEndToEndProject PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(QtEndToEndProject PRIVATE
+    Qt${QT_VERSION_MAJOR}::Widgets
+    Qt${QT_VERSION_MAJOR}::HttpServer
+)
 
 set_target_properties(QtEndToEndProject PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

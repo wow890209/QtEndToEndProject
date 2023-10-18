@@ -26,11 +26,13 @@ file(GLOB_RECURSE HFILES "*.h")
 file(GLOB_RECURSE HPPFILES "*.hpp")
 file(GLOB_RECURSE CPPFILES "*.cpp")
 file(GLOB_RECURSE UIFILES "*.ui")
+file(GLOB_RECURSE YMLFILES "*.yml")
 
 list(FILTER CPPFILES EXCLUDE REGEX "CMakeCXXCompilerId.cpp$")
 
 set(PROJECT_SOURCES
         .gitignore
+        ${YMLFILES}
         ${UIFILES}
         ${HFILES}
         ${HPPFILES}

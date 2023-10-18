@@ -30,6 +30,7 @@ file(GLOB_RECURSE UIFILES "*.ui")
 list(FILTER CPPFILES EXCLUDE REGEX "CMakeCXXCompilerId.cpp$")
 
 set(PROJECT_SOURCES
+        .gitignore
         ${UIFILES}
         ${HFILES}
         ${HPPFILES}
